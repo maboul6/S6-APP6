@@ -1,0 +1,103 @@
+<!-- THIS IS THE FRONT END. STEPS TO RUN:
+ python -m http.server 9000
+ and go on http://localhost:9000/index.html
+ Make sure to replace the url at line 19 with you ipv4 obtained with ipconfig-->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ESP32 Events Dashboard</title>
+  <style>
+    body { font-family: sans-serif; padding: 1rem; }
+    ul { list-style: none; padding: 0; }
+    li { margin: .5rem 0; }
+    .time { color: #555; margin-right: .5rem; }
+    .device { font-weight: bold; }
+    #controls { margin: 1rem 0; }
+    button { margin-right: .5rem; padding: .5rem 1rem; }
+    #led-status { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Events</h1>
+   <div id="controls">
+    <button id="led-on">Turn LED On</button>
+    <button id="led-off">Turn LED Off</button>
+    <span>Current LED state: <span id="led-status">OFF</span></span>
+  </div>
+  <ul id="list">
+    <li><em>Loading…</em></li>
+  </ul>
+
+  <script>
+  document.getElementById('led-status').textContent = 'OFF';
+
+  const API_BASE = 'http://172.20.10.2:8000';
+
+  async function refreshEvents() {
+      const ul = document.getElementById('list');
+      try {
+        const res = await fetch(`${API_BASE}/api/events`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const { events } = await res.json();
+
+        ul.innerHTML = '';
+        if (events.length === 0) {
+          ul.innerHTML = '<li><em>(no events yet)</em></li>';
+        } else {
+          events.forEach((e, i) => {
+            const dt = new Date(e.timestamp * 1000);
+            const li = document.createElement('li');
+
+            const spanTime = document.createElement('span');
+            spanTime.className = 'time';
+            spanTime.textContent = dt.toLocaleString();
+
+            const spanDevice = document.createElement('span');
+            spanDevice.className = 'device';
+            spanDevice.textContent = e.device_id;
+
+            li.appendChild(document.createTextNode(`#${i+1} `));
+            li.appendChild(spanTime);
+            li.appendChild(spanDevice);
+            ul.appendChild(li);
+          });
+        }
+      } catch (err) {
+        console.error('Fetch error:', err);
+        ul.innerHTML = `<li style="color:red">Error: ${err.message}</li>`;
+      }
+    }
+
+    async function setLed(state) {
+      try {
+        const res = await fetch(`${API_BASE}/api/led`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ state })
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const json = await res.json();
+        if (json.success) {
+          document.getElementById('led-status').textContent = state ? 'ON' : 'OFF';
+        } else {
+          throw new Error('toggle failed');
+        }
+      } catch (err) {
+        console.error('LED toggle error:', err);
+        alert('Failed to toggle LED: ' + err.message);
+      }
+    }
+
+    // Wire up buttons
+    document.getElementById('led-on')
+      .addEventListener('click', () => setLed(true));
+    document.getElementById('led-off')
+      .addEventListener('click', () => setLed(false));
+
+    // Initial loads
+    refreshEvents();
+    setInterval(refreshEvents, 5000);
+  </script>
+</body>
+</html>
