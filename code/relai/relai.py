@@ -1,19 +1,23 @@
+import sys, os, asyncio
 from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import json, pathlib, time, asyncio, uvicorn
+import json, pathlib, time, uvicorn
 
 from pydantic import BaseModel
 
 # asyncio-mqtt and aiocoap imports
-from asyncio_mqtt import Client as MQTTClient, MqttError
+from aiomqtt import Client as MQTTClient, MqttError
 from aiocoap import Context as CoAPContext, Message as CoAPMessage, Code as CoAPCode
 
+if sys.platform.lower() == "win32" or os.name.lower() == "nt":
+    from asyncio import set_event_loop_policy, WindowsSelectorEventLoopPolicy
+    set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 EVENTS_FILE = pathlib.Path("../events.txt")
 RELAY_TOPIC = "badges/uuid"
-MQTT_BROKER = "192.168.1.xxx" # 200
+MQTT_BROKER = "192.168.1.113" # 200
 MQTT_PORT = 1883
-COAP_ENDPOINT = "coap://192.168.1.xxx/relay/events" # 201
+COAP_ENDPOINT = "coap://192.168.1.113/relay/events" # 201
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -23,30 +27,32 @@ app.add_middleware(
 )
 
 class Event(BaseModel):
-    timestamp: float
     device_id: str
     event_type: str
+mqtt_manager: MQTTClient
 mqtt_client: MQTTClient
 coap_context: CoAPContext
 
 @app.on_event("startup")
 async def setup_clients():
-    global mqtt_client, coap_context
-    mqtt_client = MQTTClient(MQTT_BROKER, MQTT_PORT)
+    global mqtt_manager, mqtt_client, coap_context
+    mqtt_manager = MQTTClient(hostname=MQTT_BROKER, port=MQTT_PORT)
     # mqtt initialization
-    await mqtt_client.connect()
+    mqtt_client = await mqtt_manager.__aenter__()
     # coap initialization
     coap_context = await CoAPContext.create_client_context()
 
 @app.on_event("shutdown")
 async def teardown_clients():
-    await mqtt_client.disconnect()
+    await mqtt_manager.__aexit__(None, None, None)
     await coap_context.shutdown()
 
 @app.post("/relay/events")
-async def relay_events(event: dict):
+async def relay_events(event: Event):
     print(f"Received event: {event}")
-    payload_bytes = json.dumps(event.dict()).encode("utf‑8")
+    is_connected = event.event_type == "connected"
+    payload = { event.device_id: is_connected  } 
+    payload_bytes = json.dumps(payload).encode("utf‑8")
     asyncio.create_task(_publish_mqtt(payload_bytes))
     asyncio.create_task(_publish_coap(payload_bytes))
 

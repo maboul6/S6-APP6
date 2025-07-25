@@ -38,6 +38,17 @@ class ConnectionManager:
             await ws.send_text(text)
 
 manager = ConnectionManager()
+
+@app.on_event("startup")
+async def start_background_tasks():
+    # Schedule your loop as soon as the app starts
+    app.state.relay_client = httpx.AsyncClient()
+    asyncio.create_task(verifyActiveConnections())
+@app.on_event("shutdown")
+async def shutdown_background_tasks():
+    # Cleanup tasks when the app shuts down
+    await app.state.relay_client.aclose()
+
 async def verifyActiveConnections():
     while True:
         current_time = time.time()
@@ -49,6 +60,8 @@ async def verifyActiveConnections():
                     "device_id": data,
                     "event_type": "disconnected",
                 }
+                # send disctionnection event to relay
+                sendRelayUpdate(data, "disconnected")
                 updateDatabase(record)
                 del connectionMap[data]
         await asyncio.sleep(5)  # Check every 10 seconds
@@ -62,14 +75,18 @@ async def verifyConnection(data, timestamp):
         connectionMap[data] = timestamp
     else:
         connectionMap[data] = timestamp
+def sendRelayUpdate(device_id, event_type):
+    payload = { "device_id": device_id, "event_type": event_type }
+    asyncio.create_task(app.state.relay_client.post(RELAY_URL, json=payload))
+
 
 def updateConnection(data, timestamp):
+    if data not in connectionMap:
+        # send relay new connection event
+        sendRelayUpdate(data, "connected")
     connectionMap[data] = timestamp
 
-@app.on_event("startup")
-async def start_background_tasks():
-    # Schedule your loop as soon as the app starts
-    asyncio.create_task(verifyActiveConnections())
+
 # — HTTP endpoint to render the file contents —
 @app.get("/api/events")
 async def get_events():
@@ -101,21 +118,21 @@ async def websocket_endpoint(websocket: WebSocket):
     await manager.connect(websocket)
     print(f"WS connected")
     try:
-        async with httpx.AsyncClient() as client:
-            while True:
-                data = await websocket.receive_text()
-                timestamp = time.time()
-                record = {
-                "timestamp": timestamp,
-                "device_id": data,
-                "event_type": "connected",
-                }
-                updateConnection(data, timestamp)
-                updateDatabase(record)
-                asyncio.create_task(
-                    client.post(RELAY_URL, json=record)
-                )
-                await websocket.send_text("ACK")
+        while True:
+            data = await websocket.receive_text()
+            timestamp = time.time()
+            record = {
+            "timestamp": timestamp,
+            "device_id": data,
+            "event_type": "connected",
+            }
+            updateConnection(data, timestamp)
+            updateDatabase(record)
+            # sendRelayUpdate(data, "connected")
+            # asyncio.create_task(
+            #     client.post(RELAY_URL, json=record)
+            # )
+            await websocket.send_text("ACK")
     except Exception as e:
         print(f"Error: {e}")
         print("WebSocket disconnected")
