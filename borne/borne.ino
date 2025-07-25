@@ -14,8 +14,8 @@ int scanTime = 5;  //In seconds
 BLEScan *pBLEScan;
 
 // === Configuration Wi‑Fi ===
-const char* ssid     = "iPhone";
-const char* password = "victor321";
+const char* ssid     = "EBOX-0993";
+const char* password = "4cd49aec2f";
 
 unsigned long lastMsg = 0;
 int compteur = 0;
@@ -70,7 +70,7 @@ void setup_wifi() {
 }
 
 void setup_websocket() {
-  webSocket.begin("172.20.10.2", 8000, "/badges/uuid");
+  webSocket.begin("192.168.1.161", 8000, "/badges/uuid");
   webSocket.onEvent(webSocketEvent);
   webSocket.setReconnectInterval(5000);  // try reconnecting every 5s
 }

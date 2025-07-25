@@ -1,11 +1,14 @@
 # THIS IS THE CONTROL SERVER THAT INTERACTS WITH THE DATABASE (TEXT FILE)
 import json, time, pathlib
+import httpx
 from typing import List
 from fastapi import FastAPI, WebSocket, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import asyncio
 import uvicorn
 EVENTS_FILE = pathlib.Path("events.txt")
+RELAY_URL = "http://192.168.1.161:8001/relay/events"
 app = FastAPI()
 
 app.add_middleware(
@@ -14,7 +17,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
+connectionMap = {
+}
 class ConnectionManager:
     def __init__(self):
         self.active: List[WebSocket] = []
@@ -34,12 +38,45 @@ class ConnectionManager:
             await ws.send_text(text)
 
 manager = ConnectionManager()
+async def verifyActiveConnections():
+    while True:
+        current_time = time.time()
+        for data, timestamp in list(connectionMap.items()):
+            if current_time - timestamp > 10:  # 10 seconds timeout
+                print(f"Connection timed out: {data}")
+                record = {
+                    "timestamp": current_time,
+                    "device_id": data,
+                    "event_type": "disconnected",
+                }
+                updateDatabase(record)
+                del connectionMap[data]
+        await asyncio.sleep(5)  # Check every 10 seconds
+
+def updateDatabase(record):
+    with EVENTS_FILE.open("a") as f:
+        f.write(json.dumps(record) + "\n")
+
+async def verifyConnection(data, timestamp):
+    if data in connectionMap:
+        connectionMap[data] = timestamp
+    else:
+        connectionMap[data] = timestamp
+
+def updateConnection(data, timestamp):
+    connectionMap[data] = timestamp
+
+@app.on_event("startup")
+async def start_background_tasks():
+    # Schedule your loop as soon as the app starts
+    asyncio.create_task(verifyActiveConnections())
 # — HTTP endpoint to render the file contents —
 @app.get("/api/events")
 async def get_events():
     events = []
     for line in EVENTS_FILE.read_text().splitlines():
         try:
+            print(f"Processing line: {line}")
             events.append(json.loads(line))
         except json.JSONDecodeError:
             # skip any malformed lines
@@ -64,17 +101,21 @@ async def websocket_endpoint(websocket: WebSocket):
     await manager.connect(websocket)
     print(f"WS connected")
     try:
-        while True:
-            data = await websocket.receive_text()
-            record = {
-            "timestamp": time.time(),
-            "device_id": data
-            # you can add more fields here if you want…
-            }
-            data = f"{record['timestamp']} {record['device_id']}"
-            with EVENTS_FILE.open("a") as f:
-                f.write(json.dumps(record) + "\n")
-            await websocket.send_text("ACK")
+        async with httpx.AsyncClient() as client:
+            while True:
+                data = await websocket.receive_text()
+                timestamp = time.time()
+                record = {
+                "timestamp": timestamp,
+                "device_id": data,
+                "event_type": "connected",
+                }
+                updateConnection(data, timestamp)
+                updateDatabase(record)
+                asyncio.create_task(
+                    client.post(RELAY_URL, json=record)
+                )
+                await websocket.send_text("ACK")
     except Exception as e:
         print(f"Error: {e}")
         print("WebSocket disconnected")
