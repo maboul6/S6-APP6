@@ -1,75 +1,147 @@
-{"timestamp": 1690155432.123, "device_id": "test-device-1"}
-{"timestamp": 1690155492.456, "device_id": "test-device-2"}
-{"timestamp": 1690155552.789, "device_id": "another-id"}
-{"timestamp": 1753293016.879613, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293021.8989913, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293026.9146893, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293031.9225373, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293036.867865, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293041.898695, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293046.8973176, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293051.9128592, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293056.916784, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293061.9361207, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293066.9533975, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293071.9708781, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293076.9883108, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293082.023776, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293087.0183668, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293092.041336, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293097.0524487, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293102.0769463, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293106.9965549, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293111.9952414, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293117.1297867, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293122.0415597, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293127.0606227, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293132.0794432, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293167.1229863, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293172.1182802, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293177.1234312, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293182.1085515, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293187.180195, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293192.1868787, "device_id": "3d1d1140-8d3c-4d12-a45a-a0776962d50e"}
-{"timestamp": 1753293265.953582, "device_id": "a4030711-0611-036c-8a0b-f1ce5e7560f4"}
-{"timestamp": 1753293269.2875228, "device_id": "a4030711-0611-036c-8a0b-f1ce5e7560f4"}
-{"timestamp": 1753293316.5993452, "device_id": "00119ca6-19b0-436d-b752-d732b991ee56"}
-{"timestamp": 1753293321.5571895, "device_id": "00119ca6-19b0-436d-b752-d732b991ee56"}
-{"timestamp": 1753293326.538288, "device_id": "00119ca6-19b0-436d-b752-d732b991ee56"}
-{"timestamp": 1753293680.12231, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293685.045151, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293690.0536377, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293695.073188, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293700.084231, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293705.1059322, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293710.1284246, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293715.1437464, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293720.0849898, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293725.1805875, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753293730.1922348, "device_id": "c6e78250-bf76-4fc3-bf8b-a8765ed1e608"}
-{"timestamp": 1753294212.3083868, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294217.3141286, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294222.32498, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294252.429766, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294257.3913457, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294262.379445, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294267.4919498, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294272.5194917, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294277.5227506, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294282.5508416, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294287.5626729, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294292.5787983, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294297.525987, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294302.621999, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294307.64963, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294332.6330516, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294337.6364825, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294342.5808089, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294347.6742134, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294352.6840603, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294357.7128592, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294362.652409, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294556.1663105, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294561.1750252, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294566.2131023, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
-{"timestamp": 1753294571.2350163, "device_id": "d9aa1c45-d49c-4f79-9e8f-e3cede8be138"}
+{"timestamp": 1690155432.123, "device_id": "test-device-1", "event_type": "connected"}
+{"timestamp": 1690155492.456, "device_id": "test-device-2", "event_type": "connected"}
+{"timestamp": 1690155552.789, "device_id": "another-id", "event_type": "connected"}
+{"timestamp": 1753458502.6770625, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458507.5896802, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458512.711352, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458517.6216345, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458552.2808568, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "disconnected"}
+{"timestamp": 1753458592.7848365, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458627.9136884, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458632.9240942, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458637.843935, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "connected"}
+{"timestamp": 1753458651.8301692, "device_id": "bd953015-9dc9-441a-886e-9306ff8df983", "event_type": "disconnected"}
+{"timestamp": 1753459511.2185137, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459516.1328745, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459521.089873, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459526.167724, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459531.0995574, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459536.0989504, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459541.11769, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459546.3425293, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459551.2548733, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459556.2950366, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459561.3413935, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459566.4089756, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459571.4284463, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459581.5010424, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753459626.6284714, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459631.640418, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459636.658291, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459641.6763315, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459646.6934936, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459651.712538, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459656.7382517, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459661.8483262, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459666.763826, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459671.7814505, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459676.7989404, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459681.8255227, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459686.839269, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459691.954957, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459696.8704681, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459701.7854044, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459708.6899924, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459711.9614966, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459725.0746763, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753459738.3261619, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459744.5750127, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459746.9436917, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459751.9617558, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459756.8860817, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459762.0538704, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459767.014782, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459772.0489695, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459777.0491498, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459782.0729172, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459788.254215, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459797.6141677, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459797.6141677, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459802.1347723, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459807.1557114, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459812.17303, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459817.292207, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459824.1316628, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459827.1236584, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753459840.2269888, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753462513.5182576, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462518.550289, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462523.4533346, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462528.480344, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462533.5025194, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462546.887084, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753462673.9804265, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462678.8958895, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462683.913759, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462689.0299554, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462693.948977, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462699.0696778, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462703.9101543, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462709.1054947, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462714.0402155, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462720.5471148, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462723.9508302, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753462737.0441782, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753463101.7984488, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "connected"}
+{"timestamp": 1753463105.3328722, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "connected"}
+{"timestamp": 1753463117.5084147, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "disconnected"}
+{"timestamp": 1753463474.5649438, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753463485.2580352, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753463635.0351496, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753463646.3141625, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753463890.8091981, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463904.7221975, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753463946.7163749, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463951.0201626, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463955.989659, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463961.054402, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463966.0734959, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463971.203929, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463976.3200858, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463981.4335475, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753463986.3496509, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464006.418161, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464011.3346915, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464023.632872, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753464026.4902818, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753464031.93725, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464036.5093267, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464038.6481793, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753464041.564879, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464046.4687338, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464051.4746833, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464056.4890187, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464061.5128877, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464066.4722226, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464071.5451846, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464076.5615156, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464081.5406127, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464086.62047, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464091.5466297, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464103.7293038, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753464127.679271, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464131.860158, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464136.8800454, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464141.8918493, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464147.0241668, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464151.8280292, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464156.84528, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464161.8634477, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464166.8273044, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464171.8375816, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464177.1361353, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464182.02464, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464186.9614253, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464196.930571, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753464196.9391756, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464201.902094, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464206.908716, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464208.7719085, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753464211.937643, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464232.1490562, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "connected"}
+{"timestamp": 1753464237.1433833, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "connected"}
+{"timestamp": 1753464245.190989, "device_id": "25bf7fdd-96ff-46da-9ecc-f93cca1aab94", "event_type": "disconnected"}
+{"timestamp": 1753464250.1835876, "device_id": "078f218d-d7c6-4be9-9223-93c89cec1802", "event_type": "disconnected"}
+{"timestamp": 1753464301.7426186, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "connected"}
+{"timestamp": 1753464305.6413345, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "connected"}
+{"timestamp": 1753464320.2766037, "device_id": "1ca92e23-f087-4df7-b9a2-fd4b716a4bf6", "event_type": "disconnected"}
