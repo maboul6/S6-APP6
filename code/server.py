@@ -54,7 +54,7 @@ async def verifyActiveConnections():
         current_time = time.time()
         for data, timestamp in list(connectionMap.items()):
             if current_time - timestamp > 10:  # 10 seconds timeout
-                print(f"Connection timed out: {data}")
+                # print(f"Connection timed out: {data}")
                 record = {
                     "timestamp": current_time,
                     "device_id": data,

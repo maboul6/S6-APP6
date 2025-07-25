@@ -15,9 +15,9 @@ if sys.platform.lower() == "win32" or os.name.lower() == "nt":
     set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 EVENTS_FILE = pathlib.Path("../events.txt")
 RELAY_TOPIC = "badges/uuid"
-MQTT_BROKER = "192.168.1.113" # 200
+MQTT_BROKER = "192.168.1.113"
 MQTT_PORT = 1883
-COAP_ENDPOINT = "coap://192.168.1.113/relay/events" # 201
+COAP_ENDPOINT = "coap://192.168.1.113:5683/status"
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -67,7 +67,7 @@ async def _publish_mqtt(payload: bytes):
 
 async def _publish_coap(payload: bytes):
     try:
-        req = CoAPMessage(code=CoAPCode.POST, uri=COAP_ENDPOINT, payload=payload)
+        req = CoAPMessage(code=CoAPCode.PUT, uri=COAP_ENDPOINT, payload=payload)
         # wait up to 5s for a response
         resp = await asyncio.wait_for(coap_context.request(req).response, timeout=5.0)
         print(f"[CoAP RESP] {resp.code} {resp.payload!r}")
