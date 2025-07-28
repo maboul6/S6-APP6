@@ -5,7 +5,7 @@ import threading
 import tkinter as tk
 from tkinter import ttk
 
-BROKER_HOST = "192.168.1.113"
+BROKER_HOST = "localhost"
 BROKER_PORT = 1883
 TOPIC       = "badges/uuid"
 
@@ -54,9 +54,17 @@ def on_message(client, userdata, msg):
   except json.JSONDecodeError:
       return
 
-  for uuid, is_conn in data.items():
-      symbol  = '✓' if is_conn else '✗'
-      root.after(0, lambda u=uuid.upper(), s=symbol: tree.set(u, 'status', s))
+  for raw_uuid, is_conn in data.items():
+      uid    = raw_uuid.upper()
+      symbol = '✓' if is_conn else '✗'
+
+      def _update(u=uid, s=symbol):
+          if tree.exists(u):
+              tree.set(u, 'status', s)
+          else:
+              print(f"[Warning] UUID not in DB / tree: {u}")
+
+      root.after(0, _update)
 
 client = mqtt.Client()
 client.on_connect = on_connect
