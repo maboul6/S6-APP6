@@ -46,16 +46,24 @@ class StatusResource(resource.Resource):
         except Exception:
             return aiocoap.Message(code=aiocoap.BAD_REQUEST)
 
-        for uuid, is_conn in data.items():
-            symbol  = '✓' if is_conn else '✗'
-            root.after(0, lambda u=uuid.upper(), s=symbol: tree.set(u, 'status', s))
+        for raw_uuid, is_conn in data.items():
+          uid    = raw_uuid.upper()
+          symbol = '✓' if is_conn else '✗'
+
+          def _update(u=uid, s=symbol):
+              if tree.exists(u):
+                  tree.set(u, 'status', s)
+              else:
+                  print(f"[Warning] UUID not in DB / tree: {u}")
+
+          root.after(0, _update)
 
         return aiocoap.Message(code=aiocoap.CHANGED, payload=b'')
 
 async def coap_server_main():
     site = resource.Site()
     site.add_resource(['status'], StatusResource())
-    await aiocoap.Context.create_server_context(site, bind=('192.168.1.113', 5683))
+    await aiocoap.Context.create_server_context(site, bind=('172.20.10.3', 5684))
     await asyncio.get_running_loop().create_future()
 
 def start_coap_server():
