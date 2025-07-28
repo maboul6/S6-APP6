@@ -15,9 +15,9 @@ if sys.platform.lower() == "win32" or os.name.lower() == "nt":
     set_event_loop_policy(WindowsSelectorEventLoopPolicy())
 EVENTS_FILE = pathlib.Path("../events.txt")
 RELAY_TOPIC = "badges/uuid"
-MQTT_BROKER = "192.168.1.113"
+MQTT_BROKER = "172.20.10.3"
 MQTT_PORT = 1883
-COAP_ENDPOINT = "coap://192.168.1.113:5683/status"
+COAP_ENDPOINT = "coap://172.20.10.3:5684/status"
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,

@@ -8,7 +8,7 @@ from pydantic import BaseModel
 import asyncio
 import uvicorn
 EVENTS_FILE = pathlib.Path("events.txt")
-RELAY_URL = "http://192.168.1.161:8001/relay/events"
+RELAY_URL = "http://172.20.10.2:8001/relay/events"
 app = FastAPI()
 
 app.add_middleware(
@@ -93,7 +93,7 @@ async def get_events():
     events = []
     for line in EVENTS_FILE.read_text().splitlines():
         try:
-            print(f"Processing line: {line}")
+            # print(f"Processing line: {line}")
             events.append(json.loads(line))
         except json.JSONDecodeError:
             # skip any malformed lines

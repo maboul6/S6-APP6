@@ -13,7 +13,7 @@
     li { margin: .5rem 0; }
     .time { color: #555; margin-right: .5rem; }
     .device { font-weight: bold; }
-    .event-type { color: #007BFF; margin-left: .5rem; }
+    .event-type { margin-left: .5rem; }
     #controls { margin: 1rem 0; }
     button { margin-right: .5rem; padding: .5rem 1rem; }
     #led-status { font-weight: bold; }
@@ -33,7 +33,7 @@
   <script>
   document.getElementById('led-status').textContent = 'OFF';
 
-  const API_BASE = 'http://192.168.1.161:8000';
+  const API_BASE = 'http://172.20.10.2:8000';
 
   async function refreshEvents() {
       const ul = document.getElementById('list');
@@ -63,6 +63,11 @@
             spanEventType.className = 'event-type';
             spanEventType.textContent = e.event_type;
 
+            if (e.event_type.toLowerCase() === 'connected') {
+              spanEventType.style.color = 'green';
+            } else if (e.event_type.toLowerCase() === 'disconnected') {
+              spanEventType.style.color = 'red';
+            }
             li.appendChild(document.createTextNode(`#${i+1} `));
             li.appendChild(spanTime);
             li.appendChild(spanDevice);

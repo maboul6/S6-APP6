@@ -1,0 +1,9 @@
+1) Pas de limite de distance avec wifi. Un hacker pourrait simuler qu'il est présent en se connectant au réseau
+2) chat me up
+3) uuid officiels en utilisant les major minor values (sur l'esp32 -> l'app udes)..
+Encryption des données
+authentification sur les serveurs mqtt et coap
+man in the middle
+id spoofing.
+
+4)comme le procédural...
