@@ -748,3 +748,9 @@
 {"timestamp": 1753729675.686589, "device_id": "0f3ad791-96e5-4045-9300-90622bfd62e2", "event_type": "disconnected"}
 {"timestamp": 1753729675.686589, "device_id": "941f6b7b-4188-4c94-ae8a-92df02939af0", "event_type": "disconnected"}
 {"timestamp": 1753729680.6741958, "device_id": "6e000711-0606-4e4a-fccc-0ecfe72ccea6", "event_type": "disconnected"}
+{"timestamp": 1753729987.2485657, "device_id": "f059756c-6735-4f24-b339-071e1d3d8e4c", "event_type": "connected"}
+{"timestamp": 1753729993.296545, "device_id": "f059756c-6735-4f24-b339-071e1d3d8e4c", "event_type": "connected"}
+{"timestamp": 1753729999.375232, "device_id": "f059756c-6735-4f24-b339-071e1d3d8e4c", "event_type": "connected"}
+{"timestamp": 1753730010.8854444, "device_id": "f059756c-6735-4f24-b339-071e1d3d8e4c", "event_type": "disconnected"}
+{"timestamp": 1753730022.9930043, "device_id": "6e000711-0606-4e4a-fccc-0ecfe72ccea6", "event_type": "connected"}
+{"timestamp": 1753730035.9373415, "device_id": "6e000711-0606-4e4a-fccc-0ecfe72ccea6", "event_type": "disconnected"}
